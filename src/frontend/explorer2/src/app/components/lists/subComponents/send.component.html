@@ -1,0 +1,17 @@
+<div *ngIf="permissions.hasWritePermission()">
+  <div id="selectModality" style="display:none;">
+    <form class="form-inline">
+      <div class="form-group">
+        <select class="form-control" #modality>
+          <option *ngFor="let modality of modalities">{{modality.name}}</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-default" (click)="sendToModality(modality.value)">
+        {{'LIST.SEND' | translate}}
+      </button>
+    </form>
+  </div>
+  <button type="button" class="btn btn-default" (click)="showSelectModality()">
+    {{'LIST.SEND_REMOTE_MODALITY' | translate}}
+  </button>
+</div>

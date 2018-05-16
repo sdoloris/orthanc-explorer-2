@@ -1,0 +1,99 @@
+<div class="container-fluid">
+
+  <h3>{{'LIST.SERIES' | translate}} {{relatedStudyID}}</h3>
+  <div class="row">
+    <div class="col-sm-4">
+      <ul class="list-group">
+
+      <div class="list-group-item">
+      <div *ngIf="relatedPatient != undefined">
+      <div class="panel panel-default">
+      <div class="panel-heading">Patient</div>
+      <div class="table-responsive">
+      <table class="table table-hover">
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <th>Birthdate</th>
+          <th>Sex</th>
+        </tr>
+        <tr>
+            <td>{{relatedPatient.MainDicomTags.PatientName}}</td>
+            <td>{{relatedPatient.MainDicomTags.PatientID}}</td>
+            <td>{{relatedPatient.MainDicomTags.PatientBirthDate | date : format : fulltime}}</td>
+            <td>{{relatedPatient.MainDicomTags.PatientSex}}</td>
+        </tr>
+      </table>
+    </div>
+      </div>
+      </div>
+
+  <div *ngIf="relatedStudy != undefined">
+  <div class="panel panel-default" (click)="router.navigate(['/studies', {id: relatedPatient.ID}])">
+    <div class="panel-heading">Study</div>
+    <div class="table-responsive">
+  <table class="table table-hover">
+    <tr>
+      <th>Description</th>
+      <th>Accession number</th>
+      <th>Date</th>
+    </tr>
+    <tr>
+        <td>{{relatedStudy.MainDicomTags.StudyDescription}}</td>
+        <td>{{relatedStudy.MainDicomTags.AccessionNumber}}</td>
+        <td>{{relatedStudy.MainDicomTags.StudyDate | date : format : fulltime}}</td>
+    </tr>
+  </table>
+</div>
+  </div>
+  </div>
+  </div>
+
+    <div class="btn-group btn-group-justified list-group-item" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default"
+          [ngClass]="{'active': this.relatedPatientProtected === true}" (click)="protect('1')">{{'LIST.PROTECTED' | translate}}</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default"
+          [ngClass]="{'active': this.relatedPatientProtected === false}" (click)="protect('0')">{{'LIST.UNPROTECTED' | translate}}</button>
+      </div><br>
+      <div class="btn-group" role="group">
+        <ng-container *ngIf="this.plugins.isPluginActivated('osimis-web-viewer')">
+          <a type="button" class="btn btn-primary" target="_blank" [attr.href]="'/osimis-viewer/app/index.html?study=' + this.relatedStudy.ID">Osimis Web Viewer</a>
+        </ng-container>
+        <delete [ID]="relatedStudyID" [level]="upperLevel"></delete>
+        <send [ID]="relatedStudyID"></send>
+        <button type="button" class="btn btn-default" (click)="downloadZip('studies', relatedStudyID, 'ZIP')">{{'LIST.DOWNLOAD_ZIP' | translate}}</button>
+        <button type="button" class="btn btn-default" (click)="downloadZip('studies', relatedStudyID, 'DICOMDIR')">{{'LIST.DOWNLOAD_DICOM' | translate}}</button>
+        <anonymize type="button" class="btn btn-default" [ID]=relatedStudyID
+                   [level]=upperLevel ></anonymize>
+      </div>
+    </div>
+    </ul>
+      </div>
+
+
+    <div [ngClass]="{'col-sm-8':relatedStudy, 'col-sm-12':!relatedStudy}">
+    <div class="panel panel-default">
+    <table class="table table-hover">
+      <tr>
+        <th>Number</th>
+        <th>Description</th>
+        <th>Modality</th>
+        <th>Date</th>
+        <th>DICOM Tags</th>
+      </tr>
+      <tr *ngFor="let serie of series" (click)="onSelect(serie.ID)">
+          <td *ngIf="serie != undefined">{{serie.MainDicomTags.SeriesNumber}}</td>
+          <td *ngIf="serie != undefined">{{serie.MainDicomTags.SeriesDescription}}</td>
+          <td *ngIf="serie != undefined">{{serie.MainDicomTags.Modality}}</td>
+          <td *ngIf="serie != undefined">{{serie.MainDicomTags.SeriesDate | date : format : fulltime}}</td>
+          <td *ngIf="serie != undefined"><span class="glyphicon glyphicon-tag" aria-hidden="true" data-toggle="tooltip" data-html="true" title="{{getTagsString(serie)}}"></span></td>
+      </tr>
+    </table>
+    </div>
+  </div>
+</div>
+
+</div>

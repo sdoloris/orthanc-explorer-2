@@ -1,0 +1,20 @@
+<div class="container-fluid">
+	<h1>Plugins</h1>
+	<p class="lead" *ngIf="loading">{{'PLUGINS.LOADING' | translate}}</p>
+	<div class="row">
+		<ul class="list-unstyled">
+			<li *ngFor="let plugin of plugins">
+				<a href="#" class="list-group-item">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title">{{ plugin.ID }}
+								<span class="badge pull-right">{{ plugin.Version }}</span>
+							</h3>
+						</div>
+						<p>{{ plugin.Description }}</p>
+					</div>
+				</a>
+	 		</li>
+	 	</ul>`
+	</div>
+</div>

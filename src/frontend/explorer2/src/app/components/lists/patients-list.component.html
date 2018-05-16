@@ -1,0 +1,128 @@
+<div class="container-fluid">
+  <button class="btn btn-primary pull-right row-fluid navbar-btn" type="button" data-toggle="collapse" data-target="#searchForm" aria-expanded="false" aria-controls="collapseExample">
+    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+  Search
+  </button>
+
+  <h1>{{'LIST.PATIENTS' | translate}}</h1>
+
+  <form class="collapse well row" id="searchForm">
+    <div class="row">
+    <div class="col-sm-6">
+    <div class="form-group">
+    <input [(ngModel)]="patientName" class="form-control" name="patientName" placeholder="{{'LIST.PATIENT_NAME' | translate}}">
+    </div>
+	</div>
+
+    <div class="col-sm-6">
+    <div class="form-group">
+    <input [(ngModel)]="patientBirthDate" class="form-control" name="patientBirthDate" placeholder="{{'LIST.PATIENT_BIRTHDATE' | translate}}">
+    </div>
+    </div>
+  </div>
+
+    <div class="row">
+    <div class="col-sm-6">
+    <div class="form-group">
+    <input [(ngModel)]="accessionNumber" class="form-control" name="accessionNumber" placeholder="{{'LIST.ACCESSION_NUMBER' | translate}}">
+    </div>
+    </div>
+
+    <div class="col-sm-6">
+    <div class="form-group">
+    <input [(ngModel)]="patientID" class="form-control" name="patientID" placeholder="{{'LIST.PATIENT_ID' | translate}}">
+    </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+    <div class="form-group">
+
+    <input [(ngModel)]="patientSex" class="form-control" name="patientSex" placeholder="{{'LIST.PATIENT_GENDER' | translate}}">
+    </div>
+    </div>
+
+    <div class="col-sm-6">
+    <div class="form-group">
+    <input [(ngModel)]="studyDescription" class="form-control" name="studyDescription" placeholder="{{'LIST.STUDY_DESCRIPTION' | translate}}">
+    </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+    <div class="form-group">
+    <input [(ngModel)]="studyDate" class="form-control" name="patientName" placeholder="{{'LIST.STUDY_DATE' | translate}}">
+    </div>
+    </div>
+
+    <div class="form-group">
+    <div class="col-sm-6">
+  <button type="button" class="btn btn-primary" (click)="ok()">{{'LIST.SEARCH' | translate}}</button> <button type="button" class="btn btn-primary" (click)="reset()">{{'LIST.RESET' | translate}}</button>
+	</div>
+	</div>
+  </div>
+</form>
+
+
+<ng-template #dicomtags>
+
+</ng-template>
+
+<div class="panel panel-default">
+<table class="table table-hover">
+  <tr>
+    <th>Name</th>
+    <th>ID</th>
+    <th>Birthdate</th>
+    <th>Sex</th>
+    <th>DICOM Tags</th>
+  </tr>
+  <tr *ngFor="let patient of patients" (click)="onSelect(patient.ID)">
+      <td *ngIf="patient != undefined">{{patient.MainDicomTags.PatientName}}</td>
+      <td *ngIf="patient != undefined">{{patient.MainDicomTags.PatientID}}</td>
+      <td *ngIf="patient != undefined">{{patient.MainDicomTags.PatientBirthDate | date : format : fulltime}}</td>
+      <td *ngIf="patient != undefined">{{patient.MainDicomTags.PatientSex}}</td>
+      <td *ngIf="patient != undefined"><span class="glyphicon glyphicon-tag" aria-hidden="true" data-toggle="tooltip" data-html="true" title="{{getTagsString(patient)}}"></span></td>
+  </tr>
+</table>
+</div>
+
+
+
+	<!-- **** PAGINATION **** BOOTSTRAP
+		<ul class="pagination">
+				<li><a (click)="prevPage()" aria-label="Previous">
+		    		<span aria-hidden="true">&laquo;</span>
+		  		</a></li>
+				<li class="active"><a><input class="form-control input-sm" [(ngModel)]="page" placeholder="page" size="1"/>/{{totPage}}</a></li>
+				<li><a (click)="nextPage()" aria-label="Next">
+		    		<span aria-hidden="true">&raquo;</span>
+		  		</a></li>
+
+      	</ul> -->
+    <nav>
+      <ul class="pager row">
+        <li><a (click)="prevPage()">{{'LIST.PREVIOUS' | translate}}</a></li>
+        <li>
+          <input [(ngModel)]="page" placeholder="page" size="2"/>/{{totPage}}
+          <button class="btn btn-primary" (click)="requestPage()">{{'LIST.GO' | translate}}</button>
+        </li>
+        <li><a (click)="nextPage()">{{'LIST.NEXT' | translate}}</a></li>
+      </ul>
+    </nav>
+    <!--
+    <div class="row text-center">
+      {{'LIST.PATIENTSPERPAGE' | translate}}
+    <span *ngFor="let val of pageValues">
+      <input (change)="updateRadio()" type="radio" [value]="val" name="patientsPerPage" [(ngModel)]="perPage"> {{val}}
+    </span>
+  </div>-->
+</div>
+
+
+  <!--<div>
+    <button (click)="downloadZip('patients', relatedStudyID, 'ZIP')">Download ZIP file</button>
+  </div>
+  -->

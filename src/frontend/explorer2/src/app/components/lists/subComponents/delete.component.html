@@ -1,0 +1,9 @@
+<div *ngIf="permissions.hasDeletePermission()">
+
+  <button type="button" class="btn btn-default" (click)="deleteElem(relatedPatientID, level)">
+    <div *ngIf="level == 'patients'">{{'LIST.DELETE_PATIENT' | translate}}</div>
+    <div *ngIf="level == 'studies'">{{'LIST.DELETE_STUDY' | translate}}</div>
+    <div *ngIf="level == 'series'">{{'LIST.DELETE_SERIES' | translate}}</div>
+  </button>
+
+</div>

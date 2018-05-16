@@ -1,0 +1,190 @@
+{
+  "CONFIG": {
+    "ADD": "Add",
+    "APPLY": "Apply",
+    "CONFIRM_RESET": "Are you sure you want to reset the password?",
+    "DEFAULT_LANG": "Default language",
+    "DELETE_MODALITY": "Are you sure you want to delete the modality?",
+    "DELETE_PLUGIN": "Are you sure you want to delete the plugin?",
+    "DELETE_TAG": "Are you sure you want to delete the tag?",
+    "DELETE_USER": "Are you sure you want to delete the user?",
+    "LOADING": "Loading...",
+    "MODALITIES": "DICOM modalities",
+    "MODIFY": "Modify",
+    "NAME": "Name",
+    "NEW_TAG": "New tag",
+    "ORTHANC_CORE_CONFIG": "Orthanc Core configuration",
+    "ORTHANC_EXPLORER_CONFIG": "Orthanc Explorer configuration",
+    "PLUGIN_PATH": "Plugin path",
+    "REMOVE": "Remove",
+    "RESET": "Reset password",
+    "RESTART": "Orthanc Core needs to be restarted to apply changes.\nRestart now?",
+    "USERS": "Orthanc users"
+  },
+
+	"CONNECT": {
+		"LOGIN": "Log in",
+    "NAME_PLACEHOLDER": "name",
+		"PASSWORD": "Password: ",
+    "PASSWORD_PLACEHOLDER": "password",
+		"TITLE": "Welcome to Orthanc Explorer 2!",
+		"USERNAME": "Username: "
+	},
+
+	"HOME": {
+    "APPLY": "Apply",
+    "CHANGE_PASSWORD": "Change password",
+    "CURRENT_PASSWORD": "Current password",
+    "NEW_PASSWORD": "New password",
+    "REPEAT_NEW_PASSWORD": "Repeat new password",
+		"TITLE": "Welcome to Orthanc Explorer 2!",
+    "USER": "Welcome",
+    "TMP": "(this should be replaced by your name)",
+    "PERMISSIONS_HEAD": "Your permissions are :",
+    "PERMISSIONS_READ": "Consulting DICOM",
+    "PERMISSIONS_WRITE": "Adding/modifying DICOM",
+    "PERMISSIONS_DELETE": "Deleting DICOM",
+    "PERMISSIONS_ADMIN": "Super-user permissions"
+	},
+
+	"LIST": {
+    "ACCESSION_NUMBER": "Accession number:",
+    "ADD": "Add",
+    "ADD_TAG": "Add a tag",
+    "ANONYMIZATION": "Anonymize",
+    "ANONYMIZE": "Anonymize",
+    "ANONYMIZED_NAME": "Anonymized name",
+    "CANCEL": "Cancel",
+		"DELETE_PATIENT": "Delete the patient",
+		"DELETE_PATIENT_CONFIRM": "Are you sure you want to delete the patient?",
+		"DELETE_SERIES": "Delete the series",
+    "DELETE_SERIES_CONFIRM": "Are you sure you want to delete the series?",
+		"DELETE_STUDY": "Delete the study",
+		"DELETE_STUDY_CONFIRM": "Are you sure you want to delete the study?",
+    "DELETE" : "Delete",
+    "DELETE_CONFIRM" : "Are you sure you want to delete this element?",
+    "DOWNLOAD_DICOM" : "Download DICOM file",
+    "DOWNLOAD_ZIP" : "Download ZIP file",
+    "FILTER": "Filter",
+    "FILTER_BY_TAG": "Filter by tag",
+		"GO": "Go",
+		"INSTANCES": "List of instances of serie",
+    "MODALITIES": "Modalities:",
+		"NEXT": "Next",
+		"OF_PATIENT": "of patient",
+    "PAGE": "Page",
+    "PATIENT": "Patient",
+		"PATIENTS": "List of patients",
+		"PATIENTSPERPAGE": "Patients per page:",
+    "PATIENT_BIRTHDATE": "Patient birthdate:",
+    "PATIENT_GENDER": "Patient gender:",
+    "PATIENT_ID": "Patient ID:",
+    "PATIENT_NAME": "Patient name:",
+		"PREVIOUS": "Previous",
+    "PROTECTED": "Protected",
+    "REMOVE": "Remove",
+    "REMOVE_TAG": "Remove a tag",
+    "RESET": "Reset",
+    "SEARCH": "Search",
+    "SEND": "Send",
+    "SEND_REMOTE_MODALITY": "Send to remote modality",
+    "SERIE": "Series",
+		"SERIES": "List of series of study",
+		"STUDIES": "List of studies",
+    "STUDY": "Study",
+    "STUDY_DATE": "Study date: ",
+    "STUDY_DESCRIPTION": "Study description: ",
+    "UNPROTECTED": "Unprotected"
+	},
+
+	"NAVBAR": {
+    "CONFIG": "Configuration",
+    "CONNECT": "Connection",
+		"HOME": "Home",
+    "LANGUAGE": "Language",
+		"PATIENTS": "Patients",
+		"PLUGINS": "Plugins",
+		"QUERY": "Query",
+		"RETRIEVE": "Retrieve",
+		"STUDIES": "Studies",
+		"UPLOAD": "Upload",
+    "QUIT": "Disconnect"
+	},
+
+  "PLUGINS": {
+    "LOADING": "Loading..."
+  },
+
+  "QUERY": {
+    "MODALITIES": "Modalities: ",
+    "PATIENT_BIRTHDATE": "Patient birthdate: ",
+    "PATIENT_GENDER": "Patient gender: ",
+    "PATIENT_ID": "Patient ID: ",
+    "PATIENT_NAME": "Patient name: ",
+    "QUERY": "Query",
+    "REMOTE_MODALITY": "Remote modality: ",
+    "STUDY_DATE": "Study date: ",
+    "STUDY_DESCRIPTION": "Study description: "
+  },
+
+  "RETRIEVE": {
+    "NB_STUDIES": "Number of studies found : ",
+    "QUERY_ID": "Query ID : ",
+    "RETRIEVE": "Retrieve",
+    "RETRIEVE_ALL": "Retrieve all",
+    "RETRIEVE_SELECTED": "Retrieve selected",
+    "STUDY_DESCRIPTION": "Study description: "
+  },
+
+  "TOASTR":{
+    "ERROR": {
+      "CONNECTION": "Connection failed",
+      "DEFAULT": "An error occured",
+      "LOGIN": "Wrong username/password",
+      "NORESPONSE": "Server not responding",
+      "TITLEDEFAULT": "Error"
+    },
+    "INFO":{
+      "DEFAULT": "Ok",
+      "JOB": "The task has been registered and is in progress",
+      "NORESULT": "No result found",
+      "RESTART": "The server needs to restart to apply changes"
+    },
+    "JOB":{
+      "FAIL": "The following job could not be completed : ",
+      "NAVIGATE": "<br/>Click to directly access the result",
+      "SUCCESS": "The following job has been successfully completed : "
+    },
+    "SETUP":{
+      "SQLERROR": "Can't create the database",
+      "PATHERROR": "Path is wrong or empty. If you are using windows, try replacing '\\' by '/' Ex: C:/my/directory/path or using relative path",
+      "USERERROR": "Username or password is invalid or empty",
+      "SETERROR": "Can't create the user"
+    },
+    "USER":{
+      "ALREADYEXISTS": "This username is already used",
+      "LASTSUPERUSER" : "You can't delete the last Super User",
+      "NOTEXISTS_WRONGPASSWORD" : "The user doesn't exist or the password doesn't correspond to the username"
+    },
+    "WARNING":{
+      "ACCESS": "You don't have the permission to access this content",
+      "DEFAULT": "Warning",
+      "TIMEOUT": "You have been disconnected due to inactivity"
+    },
+    "CONNECTION_PASSWORD": "Wrong username/password",
+    "CONNECTION_TITLE": "Connection refused",
+    "JOB_DONE": "The following job has been successfully completed : ",
+    "JOB_REGISTERED": "Job has been registered and is in progress",
+    "NO_RESULT": "No result found for the given parameters",
+    "NO_RESULT_TITLE": "No result",
+    "NO_SERVER_RESPONSE": "Server not responding"
+  },
+
+	"UPLOAD": {
+		"ADD_FILES": "Add Dicom files or folders",
+    "DROP_HERE": "Drop files here",
+		"SELECT_FILE": "Select file:",
+    "SELECT_FOLDER": "Select folder:"
+	}
+}
+

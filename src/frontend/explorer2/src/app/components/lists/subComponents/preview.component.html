@@ -1,0 +1,16 @@
+<span class="glyphicon glyphicon glyphicon-eye-open" aria-hidden="true" data-toggle="modal" [attr.data-target]="'#'+this.id" (click)=show()></span>
+
+<ng-template [ngIf]="this.load">
+<div *ngIf="this != null" class="modal fade" id="{{this.id}}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Preview instances</h4>
+      </div>
+      <div class="modal-body">
+        <img style="-webkit-user-select: none; height:100%; width:100%; object-fit:contain" [attr.src]="'/instances/'+this.id+'/preview'">
+      </div>
+    </div>
+  </div>
+</div>
+</ng-template>

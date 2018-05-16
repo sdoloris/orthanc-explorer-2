@@ -1,0 +1,19 @@
+<span class="glyphicon glyphicon-option-horizontal" aria-hidden="true" data-toggle="modal" [attr.data-target]="'#' + this.studyID"></span>
+
+
+<div *ngIf="this != null" class="modal fade" id="{{this.studyID}}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Study tags editor</h4>
+      </div>
+      <div class="modal-body">
+        <ng-container *ngFor="let tag of this.allTags">
+          <button class="btn" [ngClass]="this.studyHasTag(tag) ? 'btn-primary' : 'btn-default'" (click)="this.tagToStudy(tag)">
+            {{tag}}
+          </button>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

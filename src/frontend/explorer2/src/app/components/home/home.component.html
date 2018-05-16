@@ -1,0 +1,35 @@
+<div class="container-fluid">
+<h1>{{'HOME.TITLE' | translate}}</h1>
+  <div>{{'HOME.USER' | translate}} {{permissions.getUserName()}}</div>
+  <ul> {{'HOME.PERMISSIONS_HEAD' | translate}}
+    <li *ngIf="permissions.hasReadPermission()==true">{{'HOME.PERMISSIONS_READ' | translate}}</li>
+    <li *ngIf="permissions.hasWritePermission()==true">{{'HOME.PERMISSIONS_WRITE' | translate}}</li>
+    <li *ngIf="permissions.hasDeletePermission()==true">{{'HOME.PERMISSIONS_DELETE' | translate}}</li>
+    <li *ngIf="permissions.hasAdminPermission()==true">{{'HOME.PERMISSIONS_ADMIN' | translate}}</li>
+  </ul>
+</div>
+
+<div *ngIf="permissions.usingDatabase==true" class="container-fluid">
+  <div id="changePassword" style="display:none;">
+    <form class="form-inline">
+      <div class="form-group">
+        {{'HOME.CURRENT_PASSWORD' | translate}}: <input type="password" class="form-control" (keyup.enter)="changePassword(current.value, new1.value, new2.value)" #current>
+      </div>
+      <div class="form-group">
+        {{'HOME.NEW_PASSWORD' | translate}}: <input type="password" class="form-control" (keyup.enter)="changePassword(current.value, new1.value, new2.value)" #new1>
+      </div>
+      <div class="form-group">
+        {{'HOME.REPEAT_NEW_PASSWORD' | translate}}: <input type="password" class="form-control" (keyup.enter)="changePassword(current.value, new1.value, new2.value)" #new2>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-default" type="button" (click)="changePassword(current.value, new1.value, new2.value)">
+          {{'HOME.APPLY' | translate}}
+        </button>
+        <button class="btn btn-default" type="button" (click)="hideChangePassword()">
+          {{'LIST.CANCEL'|translate}}
+        </button>
+      </div>
+    </form>
+  </div>
+  <button id="passwordButton" class="btn btn-default" (click)="showChangePassword()">{{'HOME.CHANGE_PASSWORD' | translate}}</button>
+</div>

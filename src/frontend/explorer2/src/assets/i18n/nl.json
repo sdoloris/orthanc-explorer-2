@@ -1,0 +1,190 @@
+{
+  "CONFIG": {
+    "ADD": "Toevoegen",
+    "APPLY": "Opgaan",
+    "CONFIRM_RESET": "Weet u zeker dat u het wachtwoord opnieuw wilt instellen?",
+    "DEFAULT_LANG": "Standaard taal",
+    "DELETE_MODALITY": "Weet je zeker dat je de modaliteit wilt verwijderen?",
+    "DELETE_PLUGIN": "Weet u zeker dat u de plugin wilt verwijderen?",
+    "DELETE_TAG": "Weet u zeker dat u de tag wilt verwijderen?",
+    "DELETE_USER": "Weet u zeker dat u de gebruiker wilt verwijderen?",
+    "LOADING": "Laden...",
+    "MODALITIES": "DICOM-modaliteiten",
+    "MODIFY": "Aanpassen ",
+    "NAME": "Naam",
+    "NEW_TAG": "Nieuwe tag",
+    "ORTHANC_CORE_CONFIG": "Orthanc Core configuratie",
+    "ORTHANC_EXPLORER_CONFIG": "Orthanc Explorer configuratie",
+    "PLUGIN_PATH": "Plugin pad",
+    "REMOVE": "Verwijderen",
+    "RESET": "Wachtwoord resetten",
+    "RESTART": "Orthanc Core moet opnieuw worden gestart om wijzigingen toe te passen.\nNu opnieuw starten?",
+    "USERS": "Orthanc gebruiker"
+  },
+
+  "CONNECT": {
+    "LOGIN": "Inloggen",
+    "NAME_PLACEHOLDER": "naam",
+    "PASSWORD": "Wachtwoord: ",
+    "PASSWORD_PLACEHOLDER": "wachtwoord",
+    "TITLE": "Welkom in Orthanc Explorer 2!",
+    "USERNAME": "Gebruikersnaam: "
+  },
+
+  "HOME": {
+    "APPLY": "Opgaan",
+    "CHANGE_PASSWORD": "Wachtwoord wijzigen",
+    "CURRENT_PASSWORD": "Current password",
+    "NEW_PASSWORD": "Huidig wachtwoord",
+    "REPEAT_NEW_PASSWORD": "Nieuw wachtwoord herhalen",
+    "TITLE": "Welkom in Orthanc Explorer 2!",
+    "USER": "Welkom",
+    "TMP": "(deze moet worden vervangen door uw naam)",
+    "PERMISSIONS_HEAD": "Uw rechten zijn:",
+    "PERMISSIONS_READ": "DICOM raadplegen",
+    "PERMISSIONS_WRITE": "DICOM toevoegen/wijzigen",
+    "PERMISSIONS_DELETE": "DICOM verwijderen",
+    "PERMISSIONS_ADMIN": "Super-user machtigingen"
+  },
+
+  "LIST": {
+    "ACCESSION_NUMBER": "Toetredingsnummer:",
+    "ADD": "Toevoegen",
+    "ADD_TAG": "Tag toevoegen",
+    "ANONYMIZATION": "Anonimiseren",
+    "ANONYMIZE": "Anonimiseren",
+    "ANONYMIZED_NAME": "Geanonimiseerde naam",
+    "CANCEL": "Annuleren",
+    "DELETE_PATIENT": "Patiënt verwijderen",
+    "DELETE_PATIENT_CONFIRM": "Weet u zeker dat u de patiënt wilt verwijderen?",
+    "DELETE_SERIES": "Serie verwijderen",
+    "DELETE_SERIES_CONFIRM": "Weet je zeker dat je de serie wilt verwijderen?",
+    "DELETE_STUDY": "De studie verwijderen.",
+    "DELETE_STUDY_CONFIRM": "Weet je zeker dat je de studie wilt verwijderen?",
+    "DELETE" : "Verwijderen",
+    "DELETE_CONFIRM" : "Weet je zeker dat je dit element wilt verwijderen?",
+    "DOWNLOAD_DICOM" : "DICOM-bestand downloaden",
+    "DOWNLOAD_ZIP" : "ZIP-bestand downloaden",
+    "FILTER": "Filter",
+    "FILTER_BY_TAG": "Filter op tag",
+    "GO": "Ga",
+    "INSTANCES": "Lijst van voorbeelden van reeksen",
+    "MODALITIES": "Modaliteiten:",
+    "NEXT": "Volgende",
+    "OF_PATIENT": "van patiënt",
+    "PAGE": "Pagina",
+    "PATIENT": "Patiënt",
+    "PATIENTS": "Lijst van patiënten",
+    "PATIENTSPERPAGE": "Patiënten per pagina:",
+    "PATIENT_BIRTHDATE": "Geboortedatum patiënt:",
+    "PATIENT_GENDER": "Geslacht patiënt:",
+    "PATIENT_ID": "Patiënt ID:",
+    "PATIENT_NAME": "Naam patiënt:",
+    "PREVIOUS": "Vorig",
+    "PROTECTED": "Beschermd",
+    "REMOVE": "Verwijderen",
+    "REMOVE_TAG": "Een tag verwijderen",
+    "RESET": "Terugstellen",
+    "SEARCH": "Zoeken",
+    "SEND": "Verzenden",
+    "SEND_REMOTE_MODALITY": "Verzenden naar modaliteit op afstand",
+    "SERIE": "Reeks",
+    "SERIES": "Lijst van reeksen studies",
+    "STUDIES": "Lijst van studies",
+    "STUDY": "Studie",
+    "STUDY_DATE": "Studiedatum: ",
+    "STUDY_DESCRIPTION": "Studie beschrijving: ",
+    "UNPROTECTED": "Onbeschermd"
+  },
+
+  "NAVBAR": {
+    "CONFIG": "Configuratie",
+    "CONNECT": "Aansluiting",
+    "HOME": "Thuis",
+    "LANGUAGE": "Taal",
+    "PATIENTS": "Patiënten",
+    "PLUGINS": "Plugins",
+    "QUERY": "Vraag",
+    "RETRIEVE": "Ophalen",
+    "STUDIES": "Studies",
+    "UPLOAD": "Uploaden",
+    "QUIT": "Koppel af"
+  },
+
+  "PLUGINS": {
+    "LOADING": "Laden..."
+  },
+
+  "QUERY": {
+    "MODALITIES": "Modaliteiten: ",
+    "PATIENT_BIRTHDATE": "Geboortedatum patiënt: ",
+    "PATIENT_GENDER": "Geslacht patiënt: ",
+    "PATIENT_ID": "Patiënt ID: ",
+    "PATIENT_NAME": "Naam patiënt: ",
+    "QUERY": "Vraag",
+    "REMOTE_MODALITY": "Modaliteit op afstand: ",
+    "STUDY_DATE": "Studiedatum: ",
+    "STUDY_DESCRIPTION": "Studie beschrijving: "
+  },
+
+  "RETRIEVE": {
+    "NB_STUDIES": "Aantal gevonden studies : ",
+    "QUERY_ID": "Vraag-ID: ",
+    "RETRIEVE": "Ophalen",
+    "RETRIEVE_ALL": "Alles ophalen",
+    "RETRIEVE_SELECTED": "Geselecteerde ophalen",
+    "STUDY_DESCRIPTION": "Studie beschrijving: "
+  },
+
+  "TOASTR":{
+    "ERROR": {
+      "CONNECTION": "Aansluiting mislukt",
+      "DEFAULT": "Er is een fout opgetreden",
+      "LOGIN": "Verkeerde gebruikersnaam/wachtwoord",
+      "NORESPONSE": "Server reageert niet",
+      "TITLEDEFAULT": "Fout"
+    },
+    "INFO":{
+      "DEFAULT": "Ok",
+      "JOB": "De taak is geregistreerd en wordt uitgevoerd",
+      "NORESULT": "No result found",
+      "RESTART": "De server moet opnieuw opstarten om wijzigingen toe te passen"
+    },
+    "JOB":{
+      "FAIL": "De volgende klus kon niet worden geklaard: ",
+      "NAVIGATE": "<br/>Klik voor direct toegang tot het resultaat",
+      "SUCCESS": "De volgende klus is met succes geklaard: "
+    },
+    "SETUP":{
+      "SQLERROR": "Kan de database niet maken",
+      "PATHERROR": "Pad is verkeerd of leeg",
+      "USERERROR": "Gebruikersnaam of wachtwoord is ongeldig of leeg",
+      "SETERROR": "Kan de gebruiker niet maken"
+    },
+    "USER":{
+      "ALREADYEXISTS": "Deze gebruikersnaam wordt al gebruikt",
+      "LASTSUPERUSER" : "Je kunt de laatste Supergebruiker niet verwijderen",
+      "NOTEXISTS_WRONGPASSWORD" : "De gebruiker bestaat niet of het wachtwoord komt niet overeen met de gebruikersnaam"
+    },
+    "WARNING":{
+      "ACCESS": "U hebt geen toestemming voor toegang tot deze inhoud",
+      "DEFAULT": "Waarschuwing",
+      "TIMEOUT": "U bent losgekoppeld door inactiviteit"
+    },
+    "CONNECTION_PASSWORD": "Verkeerde gebruikersnaam/wachtwoord",
+    "CONNECTION_TITLE": "Verbinding geweigerd",
+    "JOB_DONE": "De volgende klus is met succes geklaard: ",
+    "JOB_REGISTERED": "Functie is geregistreerd en in uitvoering",
+    "NO_RESULT": "Geen resultaat gevonden voor de gegeven parameters",
+    "NO_RESULT_TITLE": "Geen resultaat",
+    "NO_SERVER_RESPONSE": "Server reageert niet"
+  },
+
+  "UPLOAD": {
+    "ADD_FILES": "Dicombestanden of -mappen toevoegen",
+    "DROP_HERE": "Bestanden hier laten vallen",
+    "SELECT_FILE": "Bestand kiezen:",
+    "SELECT_FOLDER": "Map selecteren:"
+  }
+}
+

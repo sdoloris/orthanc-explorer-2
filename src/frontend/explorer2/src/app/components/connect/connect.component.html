@@ -1,0 +1,14 @@
+<div class="container-fluid">
+	<h1>{{'CONNECT.TITLE' | translate}}</h1>
+	<div class="input-group">
+		<label>{{'CONNECT.USERNAME' | translate}}</label>
+		<input class="form-control" (keyup.enter)="login()" [(ngModel)]="username" type="text" placeholder="{{'CONNECT.NAME_PLACEHOLDER' | translate}}"/>
+	</div>
+	<div class="input-group">
+		<label>{{'CONNECT.PASSWORD' | translate}}</label>
+		<input class="form-control" (keyup.enter)="login()" [(ngModel)]="password" type="password" placeholder="{{'CONNECT.PASSWORD_PLACEHOLDER' | translate}}"/>
+	</div>
+	<div class="input-group">
+		<button class="btn btn-default" (click)='login()'>{{'CONNECT.LOGIN' | translate}}</button>
+	</div>
+</div>

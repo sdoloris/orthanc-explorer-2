@@ -1,0 +1,54 @@
+<div class="container-fluid">
+
+
+  <h2>Setup</h2>
+
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="path" class="control-label col-sm-2">Database path</label>
+      <span aria-hidden="true" data-toggle="tooltip" data-html="true" title="Path should end with \\ on Windows or / on other OS">
+        <div class="col-sm-10"><input class="form-control" type="text" placeholder="Database path" name="path" [(ngModel)]="path" id="path"></div>
+      </span>
+    </div>
+    <div class="form-group">
+    <label for="permissionbased" class="control-label col-sm-2">Use permission-based access</label>
+    <span aria-hidden="true" data-toggle="tooltip" data-html="true" title="Permission-based access enables the user accounts system">
+      <div class="col-sm-10"><button class="btn btn-default" (click)="changeUse()" [ngClass]="{'active': this.usingDatabase}" id="permissionbased">Use</button></div>
+    </span>
+    </div>
+  </form>
+
+<div *ngIf="usingDatabase == true">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Create super user account
+    </div>
+    <div class="panel-body">
+      <form>
+        <div class="col-sm-4">
+        <div class="form-group">
+         <input type="text" class="form-control" placeholder="Name" name="username" [(ngModel)]="name">
+        </div>
+        </div>
+        <div class="col-sm-4">
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="password">
+        </div>
+        </div>
+        <div class="col-sm-4">
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Password" name="passwordBis" [(ngModel)]="passwordBis">
+        </div>
+        </div>
+        <span *ngIf="passwordBis == password && password != '' && password != undefined; else different" style="color: green">Ok</span>
+        <span *ngIf="passwordBis != password" style="color: red">Passwords have to be the same</span>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-default" [attr.disabled]="path =='' ||path==undefined||(usingDatabase == true && (name == undefined || name=='' || password==undefined||password=='' ||password != passwordBis)) ? 'disabled' : null" (click)="confirm()">Confirm</button>
+
+</div>

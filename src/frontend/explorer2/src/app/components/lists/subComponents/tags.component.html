@@ -1,0 +1,16 @@
+<div *ngIf="permissions.hasWritePermission()">
+<div>{{'LIST.ADD_TAG' | translate}}</div>
+
+<select class="form-control"  [(ngModel)]="selectedTag">
+  <option *ngFor="let tag of tags" [ngValue]="tag" >{{tag}}</option>
+</select>
+<button type="button" class="btn btn-default" (click)="addTag()">{{'LIST.ADD' | translate}}</button>
+
+<div>
+<div>{{'LIST.REMOVE_TAG' | translate}}</div>
+<select class="form-control" [(ngModel)]="toDeleteTag">
+  <option *ngFor="let tag of studyTags" [ngValue]="tag" >{{tag}}</option>
+</select>
+  <button type="button" class="btn btn-default" (click)="deleteTag()">{{'LIST.REMOVE' | translate}}</button>
+</div>
+</div>

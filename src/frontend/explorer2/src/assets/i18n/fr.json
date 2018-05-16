@@ -1,0 +1,189 @@
+{
+  "CONFIG": {
+    "ADD": "Ajouter",
+    "APPLY": "Appliquer",
+    "CONFIRM_RESET": "Vous êtes sûr de vouloir remettre le mot de passe?",
+    "DEFAULT_LANG": "Langue par défaut",
+    "DELETE_MODALITY": "Vous êtes sûr de vouloir supprimer la modalité?",
+    "DELETE_PLUGIN": "Vous êtes sûr de vouloir supprimer le plugin?",
+    "DELETE_TAG": "Vous êtes sûr de vouloir supprimer le tag?",
+    "DELETE_USER": "Vous êtes sûr de vouloir supprimer l'utilisateur?",
+    "LOADING": "Chargement en cours...",
+    "MODALITIES": "Modalités DICOM",
+    "MODIFY": "Modifier",
+    "NAME": "Nom",
+    "NEW_TAG": "Nouveau tag",
+    "ORTHANC_CORE_CONFIG": "Configuration d'Orthanc",
+    "ORTHANC_EXPLORER_CONFIG": "Configuration d'Orthanc Explorer",
+    "PLUGIN_PATH": "Chemin d'accès du plugin",
+    "REMOVE": "Supprimer",
+    "RESET": "Réinitialiser mot de passe",
+    "RESTART": "Orthanc Core doit être redémarré pour que les changements soient appliquées.\nRedémarrer maintenant?",
+    "USERS": "Utilisateurs d'Orthanc"
+  },
+
+	"CONNECT": {
+		"LOGIN": "Connecter",
+    "NAME_PLACEHOLDER": "nom",
+		"PASSWORD": "Mot de passe: ",
+    "PASSWORD_PLACEHOLDER": "mot de passe",
+		"TITLE": "Bienvenue à l'Orthanc Explorer 2!",
+		"USERNAME": "Utilisateur: "
+	},
+
+	"HOME": {
+    "APPLY": "Appliquer",
+    "CHANGE_PASSWORD": "Changer mot de passe",
+    "CURRENT_PASSWORD": "Mot de passe actuel",
+    "NEW_PASSWORD": "Nouveau mot de passe",
+    "REPEAT_NEW_PASSWORD": "Répéter le mot de passe",
+		"TITLE": "Bienvenue sur Orthanc Explorer 2!",
+    "USER": "Bienvenue",
+    "TMP": "(ceci devrait être remplacé par votre nom)",
+    "PERMISSIONS_HEAD": "Vos droits :",
+    "PERMISSIONS_READ": "Consulter les DICOM",
+    "PERMISSIONS_WRITE": "Ajouter/modifier des DICOM",
+    "PERMISSIONS_DELETE": "Supprimer des DICOM",
+    "PERMISSIONS_ADMIN": "Droits de super-utilisateur"
+	},
+
+	"LIST": {
+    "ACCESSION_NUMBER": "Numéro d'accession:",
+    "ADD": "Ajouter",
+    "ADD_TAG": "Ajouter un tag",
+    "ANONYMIZATION": "Anonymiser",
+    "ANONYMIZE": "Anonymiser",
+    "ANONYMIZED_NAME": "Nom anonymisé",
+    "CANCEL": "Annuler",
+		"DELETE_PATIENT": "Supprimer patient",
+		"DELETE_PATIENT_CONFIRM": "Vous êtes sûr de vouloir supprimer le patient?",
+		"DELETE_SERIES": "Supprimer série",
+    "DELETE_SERIES_CONFIRM": "Vous êtes sûr de vouloir supprimer la série?",
+		"DELETE_STUDY": "Supprimer étude",
+		"DELETE_STUDY_CONFIRM": "Vous êtes sûr de vouloir supprimer l'étude?",
+    "DELETE" : "Supprimer",
+    "DELETE_CONFIRM" : "Êtes vous sûr de vouloir supprimer cet élément?",
+    "DOWNLOAD_DICOM": "Télécharger fichier DICOM",
+    "DOWNLOAD_ZIP": "Télécharger fichier ZIP",
+    "FILTER": "Filtrer",
+    "FILTER_BY_TAG": "Filtrer par tag",
+		"GO": "Go",
+		"INSTANCES": "Liste des instances de la série",
+    "MODALITIES": "Modalités : ",
+		"NEXT": "Suivant",
+		"OF_PATIENT": "du patient",
+    "PAGE": "Page",
+    "PATIENT": "Patient",
+		"PATIENTS": "Liste de patients",
+		"PATIENTSPERPAGE": "Patients par page : ",
+    "PATIENT_BIRTHDATE": "Date de naissance du patient: ",
+    "PATIENT_GENDER": "Sexe du patient: ",
+    "PATIENT_ID": "ID du patient:",
+    "PATIENT_NAME": "Nom du patient: ",
+		"PREVIOUS": "Précédent",
+    "PROTECTED": "Protégé",
+    "REMOVE": "Supprimer",
+    "REMOVE_TAG": "Supprimer un tag",
+    "RESET": "Reset",
+    "SEARCH": "Rechercher",
+    "SEND": "Envoyer",
+    "SEND_REMOTE_MODALITY": "Envoyer à une modalité",
+    "SERIE": "Série",
+		"SERIES": "Liste de séries de l'étude",
+		"STUDIES": "Liste d'études",
+    "STUDY": "Examen",
+    "STUDY_DATE": "Date de l'étude : ",
+    "STUDY_DESCRIPTION": "Description de l'étude : ",
+    "UNPROTECTED": "Non protégé"
+	},
+
+	"NAVBAR": {
+    "CONNECT": "Connexion",
+    "CONFIG": "Configuration",
+		"HOME": "Accueil",
+    "LANGUAGE": "Langue",
+		"PATIENTS": "Patients",
+		"PLUGINS": "Plugins",
+		"QUERY": "Rechercher",
+		"RETRIEVE": "Recevoir",
+		"STUDIES": "Examens",
+		"UPLOAD": "Upload",
+    "QUIT": "Déconnexion"
+	},
+
+  "PLUGINS": {
+    "LOADING": "Chargement en  cours..."
+  },
+
+  "QUERY": {
+    "MODALITIES": "Modalités: ",
+    "PATIENT_BIRTHDATE": "Date de naissance du patient: ",
+    "PATIENT_GENDER": "Sexe du patient: ",
+    "PATIENT_ID": "ID du patient: ",
+    "PATIENT_NAME": "Nom du patient: ",
+    "QUERY": "Rechercher",
+    "REMOTE_MODALITY": "Modalité distante: ",
+    "STUDY_DATE": "Date de l'étude: ",
+    "STUDY_DESCRIPTION": "Description de l'étude: "
+  },
+
+  "RETRIEVE": {
+    "NB_STUDIES": "Nombre d'études trouvées : ",
+    "QUERY_ID": "Recherche ID : ",
+    "RETRIEVE": "Recupérer",
+    "RETRIEVE_ALL": "Récuperer tout",
+    "RETRIEVE_SELECTED": "Recupérer ceux sélectionnés",
+    "STUDY_DESCRIPTION": "Description de l'étude: "
+  },
+
+  "TOASTR":{
+    "ERROR": {
+      "CONNECTION": "Impossible de se connecter",
+      "DEFAULT": "Une erreur s'est produite",
+      "LOGIN": "Mauvais nom d'utilisateur/mot de passe",
+      "NORESPONSE": "Le serveur ne répond pas",
+      "TITLEDEFAULT": "Erreur"
+    },
+    "INFO":{
+      "DEFAULT": "Ok",
+      "JOB": "La tâche a été enregistrée et est en progrès",
+      "NORESULT": "Aucun résultat trouvé",
+      "RESTART": "Le serveur doit être redémarré pour appliquer les changements."
+    },
+    "JOB":{
+      "FAIL": "La tâche suivante n'a pas pu être complétée : ",
+      "NAVIGATE": "<br/>Cliquez pour accéder directement au résultat",
+      "SUCCESS": "La tâche suivante a été complétée avec succès : "
+    },
+    "SETUP":{
+      "SQLERROR": "Erreur lors de la création de la base de données",
+      "PATHERROR": "Chemin vide ou incorrect. Si vous utilisez Windows, essayez de remplacer les '\\' par des '/' Ex: C:/my/directory/path ou d'utiliser un chemin relatif",
+      "USERERROR": "Nom d'utilisateur ou mot de passe vide ou invalide",
+      "SETERROR": "Impossible de créer l'utilisateur"
+    },
+    "USER":{
+      "ALREADYEXISTS": "Le nom d'utilisateur est déjà utilisé",
+      "LASTSUPERUSER" : "Vous ne pouvez pas supprimer le dernier administrateur",
+      "NOTEXISTS_WRONGPASSWORD" : "L'utilisateur n'existe pas ou le mot de passe ne correspond pas à lui"
+    },
+    "WARNING":{
+      "ACCESS": "Vous n'avez pas les permissions pour accéder ce contenu",
+      "DEFAULT": "Avertissement",
+      "TIMEOUT": "Vous avez été déconnecté à cause d'inactivité."
+    },
+    "CONNECTION_PASSWORD": "Nom d'utilisateur/ mot de passe erroné",
+    "CONNECTION_TITLE": "Connexion refusée",
+    "JOB_DONE": "La tâche suivante a été complétée avec succès: ",
+    "JOB_REGISTERED": "La tâche a été enrégistrée et est en progrès",
+    "NO_RESULT": "Aucun résulat pour les paramètres donnés",
+    "NO_RESULT_TITLE": "Aucun résultat",
+    "NO_SERVER_RESPONSE": "Le serveur ne répond pas"
+  },
+
+	"UPLOAD": {
+		"ADD_FILES": "Ajouter fichiers DICOM ou dossiers",
+    "DROP_HERE": "Tirez vos fichiers vers ici",
+		"SELECT_FILE": "Choisissez les fichiers:",
+    "SELECT_FOLDER": "Choississez le dossier:"
+	}
+}

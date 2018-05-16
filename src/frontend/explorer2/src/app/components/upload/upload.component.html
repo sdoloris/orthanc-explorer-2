@@ -1,0 +1,41 @@
+<div class="container-fluid">
+       <div class="form-inline">
+          <h4>{{'UPLOAD.SELECT_FILE' | translate}}</h4>
+          <div class="form-group">
+          <label class="btn btn-primary btn-file" (onFileDrop)="toDoDragAndDrop($event)">
+          Choose files
+          <input type="file" (change)="toDoButton($event.target)" multiple="multiple" style="display:none">
+          </label>
+          </div>
+      </div><br>
+
+      <div class="form-inline">
+          <h4>{{'UPLOAD.SELECT_FOLDER' | translate}}</h4>
+          <div class="form-group">
+          <label class="btn btn-primary btn-file">
+          Choose files
+          <input type="file" (change)="toDoButton($event.target)" webkitdirectory multiple style="display:none">
+          </label>
+          </div>
+      </div><br>
+      <div>
+      <file-drop (onFileDrop)="toDoDragAndDrop($event)" >
+          <span>{{'UPLOAD.ADD_FILES' | translate}}</span>
+      </file-drop>
+      </div><br>
+
+      <!-- Progression bar -->
+      <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [style.width]="((numberUploaded/numberToUpload)*100)+'%'">
+            {{(100*numberUploaded/numberToUpload)| number:'1.0-0'}}%
+            </div>
+      </div>
+
+      <!-- List of files to upload TODO
+      <div class="container-fluid">
+      <ul class="list-group">
+      	<h4 class="list-group-item-heading">Files to upload</h4>
+        <li class="list-group-item list-group-item-info" *ngFor="let fileName of inputvalue.files">{{fileName}}</li>
+	  </ul>
+	  </div>-->
+</div>

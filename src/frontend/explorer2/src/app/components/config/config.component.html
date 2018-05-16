@@ -1,0 +1,203 @@
+<div class="container-fluid">
+
+  <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{'CONFIG.MODALITIES' | translate}}</h3>
+  </div>
+  <div class="panel-body">
+    <form class="form-inline">
+      <div class="form-group">
+        <button class="btn btn-default" type="button" (click)="addModality(modalityName.value, aet.value, ip.value, port.value, patch.value); modalityName.value=''; aet.value=''; ip.value=''; port.value=''; patch.value='Generic'">
+          {{'CONFIG.ADD' | translate}}
+        </button>
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="{{'CONFIG.NAME' | translate}}" #modalityName>
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="AET" #aet>
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="IP" #ip>
+      </div>
+
+      <div class="form-group">
+        <input type="number" class="form-control" min="0" placeholder="Port" #port>
+      </div>
+
+      <div class="form-group">
+        <select class="form-control" #patch>
+          <option>Generic</option>
+          <option>StoreScp</option>
+          <option>ClearCanvas</option>
+          <option>MedInria</option>
+          <option>Dcm4Chee</option>
+          <option>SyngoVia</option>
+          <option>AgfaImpax</option>
+          <option>EFilm2</option>
+          <option>Vitrea</option>
+        </select>
+      </div>
+     </form>
+    <div>
+      <ul class="list-group" *ngIf="modalities.length > 0">
+        <a class="list-group-item" *ngFor="let modality of modalities">
+          <h4 class="list-group-item-heading">{{modality.name}}</h4>
+          <div attr.id="details {{modality.name}}" style="display:none;">
+            AET: {{modality.aet}}, IP: {{modality.ip}}, Port: {{modality.port}}, Patch: {{modality.patch}}
+            <div attr.id="modify {{modality.name}}" style="display:none;">
+              <form class="form-inline">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="AET" #aet>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="IP" #ip>
+                </div>
+                <div class="form-group">
+                  <input type="number" class="form-control" min="0" placeholder="Port" #port>
+                </div>
+                <div class="form-group">
+                  <select class="form-control" #patch>
+                    <option>Generic</option>
+                    <option>StoreScp</option>
+                    <option>ClearCanvas</option>
+                    <option>MedInria</option>
+                    <option>Dcm4Chee</option>
+                    <option>SyngoVia</option>
+                    <option>AgfaImpax</option>
+                    <option>EFilm2</option>
+                    <option>Vitrea</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-default" type="button" (click)="modifyModality(modality, aet.value, ip.value, port.value, patch.value)">
+                    {{'CONFIG.APPLY' | translate}}
+                  </button>
+                </div>
+              </form>
+            </div>
+            <button class="btn btn-default" (click)="showModifyModality(modality.name)">{{'CONFIG.MODIFY' | translate}}</button>
+          </div>
+          <button class="btn btn-default" (click)="showDetailsModality(modality.name)">Details</button>
+          <button class="btn btn-default" (click)="deleteModality(modality)"><span class="glyphicon glyphicon-remove"></span> {{'CONFIG.REMOVE' | translate}}</button>
+        </a>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Plugins</h3>
+  </div>
+  <div class="panel-body">
+    <form class="form-inline">
+      <div class="form-group">
+        <button (click)="addPlugin(pluginPath.value); pluginPath.value=''" class="btn btn-default">{{'CONFIG.ADD' | translate}}</button>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="{{'CONFIG.PLUGIN_PATH' | translate}}" #pluginPath>
+      </div>
+    </form>
+
+    <br>
+
+    <div *ngIf="loadingPlugins">{{'CONFIG.LOADING' | translate}}</div>
+    <div>
+    <ul class="list-group" *ngIf="plugins.length > 0">
+      <a class="list-group-item" *ngFor="let plugin of plugins" (click)="deletePlugin(plugin)">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> {{'CONFIG.REMOVE' | translate}} {{plugin}}
+      </a>
+    </ul>
+    </div>
+  </div>
+</div>
+
+  <div *ngIf="permission.usingDatabase==true" class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{'CONFIG.USERS' | translate}}</h3>
+  </div>
+  <div class="panel-body">
+    <form class="form-inline">
+      <div class="form-group">
+        <button class="btn btn-default" (click)="addUser(username.value, password.value); username.value=''; password.value=''">{{'CONFIG.ADD' | translate}}</button>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Name" #username>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password" #password>
+      </div>
+      <div class="form-group">
+        <label class="label label-default" name="permissions" *ngFor="let permission of permissions" class="checkbox-inline">
+          <input (change)="changeNewPermission(permission)" type="checkbox" name="new-permissions">{{permission}}
+        </label>
+      </div>
+    </form>
+
+
+    <div *ngIf="users.length > 0">
+      <br>
+      <ul class="list-group">
+        <a class="list-group-item" *ngFor="let user of users">
+          <div class="container-fluid">
+          <h3 class="list-group-item-heading">{{user.name}}</h3>
+          <form class="form-inline row">
+          <div class="form-group">
+            <label name="permissions" *ngFor="let permission of permissions" class="checkbox-inline">
+              <input (change)="changePermission(user, permission)" [checked]="hasPermission(user, permission)" type="checkbox" name="permissions">{{permission}}
+            </label><br>
+          </div>
+          <div class="form-group pull-right">
+            <button class="btn btn-default" (click)="deleteUser(user)"><span class="glyphicon glyphicon-remove"></span> {{'CONFIG.REMOVE' | translate}}</button>
+          </div>
+          <div class="form-group pull-right">
+            <button class="btn btn-default" (click)="resetPassword(user)">{{'CONFIG.RESET' | translate}}</button>
+          </div>
+          </form>
+        </div>
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Tags</h3>
+    </div>
+    <div class="panel-body">
+      <form class="form-inline row">
+        <div class="form-group">
+          <button class="btn btn-default" (click)="addTag(tagname.value); tagname.value=''">{{'CONFIG.ADD' | translate}}</button>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Tag name" #tagname>
+        </div>
+      </form>
+
+      <ul class="list-group" *ngIf="tags.length > 0">
+        <a class="list-group-item" *ngFor="let tag of tags; let i = index">
+          <h4 class="list-group-item-heading">{{tag}}</h4>
+          <div attr.id="tag{{i}}" style="display:none;">
+            <form class="form-inline row">
+              <div class="form-group">
+                <button class="btn btn-default" (click)="modifyTag(tag, newtag.value, i); newtag.value=''">{{'CONFIG.APPLY' | translate}}</button>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{'CONFIG.NEW_TAG' | translate}}" #newtag>
+              </div>
+            </form>
+          </div>
+          <button class="btn btn-default" (click)="showModifyTag(i)">{{'CONFIG.MODIFY' | translate}}</button>
+          <button class="btn btn-default" (click)="deleteTag(tag)"><span class="glyphicon glyphicon-remove"></span> {{'CONFIG.REMOVE' | translate}}</button>
+        </a>
+      </ul>
+  </div>
+  </div>
+
+</div>

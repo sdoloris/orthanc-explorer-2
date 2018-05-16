@@ -1,0 +1,43 @@
+<div *ngIf="config">
+  {{getLangFromConfig()}}
+</div>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+				<img alt="Brand" src="favicon.ico">
+			</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-left">
+				<li *ngIf="permissions.isConnected == true" [routerLinkActive]="['active']"><a [routerLink]="['home']">{{'NAVBAR.HOME' | translate}}</a></li>
+        <li *ngIf="permissions.isConnected == false" [routerLinkActive]="['active']"><a [routerLink]="['connect']">{{'NAVBAR.CONNECT' | translate}}</a></li>
+				<li *ngIf="permissions.isConnected == true" [routerLinkActive]="['active']"><a [routerLink]="['plugin']">{{'NAVBAR.PLUGINS' | translate}}</a></li>
+				<li *ngIf="permissions.hasReadPermission()==true" [routerLinkActive]="['active']"><a [routerLink]="['patients']">{{'NAVBAR.PATIENTS' | translate}}</a></li>
+				<li *ngIf="permissions.hasReadPermission()==true" [routerLinkActive]="['active']"><a [routerLink]="['studies']">{{'NAVBAR.STUDIES' | translate}}</a></li>
+				<li *ngIf="permissions.hasWritePermission()==true" [routerLinkActive]="['active']"><a [routerLink]="['upload']">{{'NAVBAR.UPLOAD' | translate}}</a></li>
+				<li *ngIf="permissions.hasWritePermission()==true" [routerLinkActive]="['active']"><a [routerLink]="['query']">{{'NAVBAR.QUERY' | translate}}</a></li>
+        <li *ngIf="permissions.hasAdminPermission()==true" [routerLinkActive]="['active']"><a [routerLink]="['config']">{{'NAVBAR.CONFIG' | translate}}</a></li>
+        <li *ngIf="permissions.isConnected==true && permissions.usingDatabase==true" (click)="closeConnection()" [routerLinkActive]="['active']"><a>{{'NAVBAR.QUIT' | translate}}</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{'NAVBAR.LANGUAGE' | translate}}<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a (click)="switchLanguage('en')">English</a></li>
+					<li><a (click)="switchLanguage('fr')">Français</a></li>
+          <li><a (click)="switchLanguage('nl')">Nederlands</a></li>
+					<li><a (click)="switchLanguage('de')">Deutsch</a></li>
+				</ul>
+			</li>
+			</ul>
+		</div>
+	</div>
+</nav>

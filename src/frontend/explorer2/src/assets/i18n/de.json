@@ -1,0 +1,187 @@
+{
+  "CONFIG": {
+    "ADD": "Hinzufügen",
+    "APPLY": "Ändern",
+    "CONFIRM_RESET": "Sind Sie sicher, dass Sie das Passwort zurücksetzen möchten?",
+    "DEFAULT_LANG": "Standardsprache",
+    "DELETE_MODALITY": "Sind Sie sicher, dass Sie die Modalität löschen möchten?",
+    "DELETE_PLUGIN": "Sind Sie sicher, dass Sie das Plugin löschen möchten?",
+    "DELETE_TAG": "Sind Sie sicher, dass Sie den Tag löschen möchten?",
+    "DELETE_USER": "Sind Sie sicher, dass Sie den Benutzer löschen möchten?",
+    "LOADING": "Lade...",
+    "MODALITIES": "DICOM-Modalitäten",
+    "MODIFY": "Ändern",
+    "NAME": "Name",
+    "NEW_TAG": "Neuer Tag",
+    "ORTHANC_CORE_CONFIG": "Orthanc-Konfiguration",
+    "ORTHANC_EXPLORER_CONFIG": "Orthanc Explorer-Konfiguration",
+    "PLUGIN_PATH": "Plugin-Pfad",
+    "REMOVE": "Löschen",
+    "RESET": "Passwort zurücksetzen",
+    "RESTART": "Orthanc Core muss neu gestartet werden, damit die Änderungen gültig werden.\nJetzt neu starten?",
+    "USERS": "Orthanc-Benutzer"
+  },
+
+  "CONNECT": {
+		"LOGIN": "Einloggen",
+    "NAME_PLACEHOLDER": "Name",
+		"PASSWORD": "Passwort: ",
+    "PASSWORD_PLACEHOLDER": "Passwort",
+		"TITLE": "Willkommen zum Orthanc Explorer 2!",
+		"USERNAME": "Benutzername: "
+	},
+
+	"HOME": {
+    "APPLY": "Ausführen",
+    "CHANGE_PASSWORD": "Passwort ändern",
+    "CURRENT_PASSWORD": "Aktuelles Passwort",
+    "NEW_PASSWORD": "Neues Passwort",
+    "REPEAT_NEW_PASSWORD": "Passwort erneut eingeben",
+		"TITLE": "Willkommen zum Orthanc Explorer 2!",
+    "USER": "Willkommen",
+    "TMP": "(dies sollte durch ihren Namen ersetzt werden)",
+    "PERMISSIONS_HEAD": "Ihre Berechtigungen sind: ",
+    "PERMISSIONS_READ": "DICOMs abfragen",
+    "PERMISSIONS_WRITE": "DICOMs hinzufügen/ändern",
+    "PERMISSIONS_DELETE": "DICOMs löschen",
+    "PERMISSIONS_ADMIN": "Administrator-Berechtigungen"
+	},
+
+	"LIST": {
+    "ACCESSION_NUMBER": "Zugangs-nummer:",
+    "ADD": "Hinzufügen",
+    "ADD_TAG": "Tag hinzufügen",
+    "ANONYMIZATION": "Anonymisieren",
+    "ANONYMIZE": "Anonymisieren",
+    "ANONYMIZED_NAME": "Anonymer Name",
+    "CANCEL": "Abbrechen",
+		"DELETE_PATIENT": "Patienten löschen",
+		"DELETE_PATIENT_CONFIRM": "Sind Sie sicher, dass Sie den Patienten löschen möchten?",
+		"DELETE_SERIES": "Serie löschen",
+    "DELETE_SERIES_CONFIRM": "Sind Sie sicher, dass Sie die Serie löschen möchten?",
+		"DELETE_STUDY": "Studie löschen",
+		"DELETE_STUDY_CONFIRM": "Sind Sie sicher, dass Sie die Studie löschen möchten?",
+    "DOWNLOAD_DICOM": "DICOM-Datei herunterladen",
+    "DOWNLOAD_ZIP": "ZIP-Datei herunterladen",
+    "FILTER": "Filtern",
+    "FILTER_BY_TAG": "Nach Tag filtern",
+		"GO": "Los",
+		"INSTANCES": "Instanzen-Liste der Serie",
+    "MODALITIES": "Modalitäten: ",
+		"NEXT": "Nächste",
+		"OF_PATIENT": "des Patienten",
+    "PAGE": "Seite",
+    "PATIENT": "Patient",
+		"PATIENTS": "Patienten-Liste",
+		"PATIENTSPERPAGE": "Patienten pro Seite: ",
+    "PATIENT_BIRTHDATE": "Patienten-Geburtsdatum: ",
+    "PATIENT_GENDER": "Patienten-Geschlecht: ",
+    "PATIENT_ID": "Patienten-ID:",
+    "PATIENT_NAME": "Name des Patienten: ",
+		"PREVIOUS": "Vorherige",
+    "PROTECTED": "Geschützt",
+    "REMOVE": "Entfernen",
+    "REMOVE_TAG": "Tag entfernen",
+    "RESET": "Zurücksetzen",
+    "SEARCH": "Suchen",
+    "SEND": "Senden",
+    "SEND_REMOTE_MODALITY": "An eine Modalität schicken",
+    "SERIE": "Serie",
+		"SERIES": "Serien-Liste der Studie",
+		"STUDIES": "Studien-Liste",
+    "STUDY": "Studie",
+    "STUDY_DATE": "Datum der Studie:",
+    "STUDY_DESCRIPTION": "Studien-beschreibung: ",
+    "UNPROTECTED": "Ungeschützt"
+	},
+
+	"NAVBAR": {
+    "CONNECT": "Anmelden",
+    "CONFIG": "Konfiguration",
+		"HOME": "Startseite",
+    "LANGUAGE": "Sprache",
+		"PATIENTS": "Patienten",
+		"PLUGINS": "Plugins",
+		"QUERY": "Abfragen",
+		"RETRIEVE": "Erlangen",
+		"STUDIES": "Studien",
+		"UPLOAD": "Hochladen",
+    "QUIT": "Abmelden"
+	},
+
+  "PLUGINS": {
+    "LOADING": "Lade..."
+  },
+
+  "QUERY": {
+    "MODALITIES": "Modalitäten: ",
+    "PATIENT_BIRTHDATE": "Geburtsdatum des Patienten: ",
+    "PATIENT_GENDER": "Geschlecht des Patienten: ",
+    "PATIENT_ID": "Patienten-ID: ",
+    "PATIENT_NAME": "Name des Patienten: ",
+    "QUERY": "Abfragen",
+    "REMOTE_MODALITY": "Fern-Modalität: ",
+    "STUDY_DATE": "Datum der Studie: ",
+    "STUDY_DESCRIPTION": "Beschreibung der Studie: "
+  },
+
+  "RETRIEVE": {
+    "NB_STUDIES": "Anzahl gefundener Studien: ",
+    "QUERY_ID": "Abfrage-ID : ",
+    "RETRIEVE": "Empfangen",
+    "RETRIEVE_ALL": "Alles empfangen",
+    "RETRIEVE_SELECTED": "Ausgewählte empfangen",
+    "STUDY_DESCRIPTION": "Beschreibung der Studie: "
+  },
+
+  "TOASTR":{
+    "ERROR": {
+      "CONNECTION": "Verbindung fehlgeschlagen",
+      "DEFAULT": "Ein Fehler ist vorgefallen",
+      "LOGIN": "Falscher Benutzername/Passwort",
+      "NORESPONSE": "Der Server antwortet nicht",
+      "TITLEDEFAULT": "Fehler"
+    },
+    "INFO":{
+      "DEFAULT": "Ok",
+      "JOB": "Der Auftrag wurde registriert und ist in Bearbeitung",
+      "NORESULT": "Kein Resultat gefunden",
+      "RESTART": "Der Server muss neu gestartet werden um die Änderungen anzuwenden."
+    },
+    "JOB":{
+      "FAIL": "Der folgende Auftrag konnte nicht beenden werden: ",
+      "NAVIGATE": "<br/>Klicken um direkt auf das Resultat zuzugreifen.",
+      "SUCCESS": "Der folgende Auftrag wurde erfolgreich beendet: "
+    },
+    "SETUP":{
+      "SQLERROR": "Die Datenbank kann nicht erstellt werden",
+      "PATHERROR": "Pfad ist falsch oder leer",
+      "USERERROR": "Benutzername oder Passwort ist ungültig oder leer",
+      "SETERROR": "Kann den Benutzer nicht erstellen"
+    },
+    "USER":{
+      "ALREADYEXISTS": "Der Benutzername existiert bereits",
+      "LASTSUPERUSER" : "Sie können nicht den letzten Administrator entfernen",
+      "NOTEXISTS_WRONGPASSWORD" : "Der Benutzer existiert nicht oder das Passwort stimmt nicht mit dem Benutzernamen überein"
+    },
+    "WARNING":{
+      "ACCESS": "Sie haben keine Berechtigung für diesen Inhalt",
+      "DEFAULT": "Warnung",
+      "TIMEOUT": "Sie wurden abgemeldet, da Sie zu lange inaktiv waren."
+    },
+    "CONNECTION_PASSWORD": "Falscher Benutzername/Passwort",
+    "CONNECTION_TITLE": "Verbindung abgelehnt",
+    "JOB_DONE": "Der folgende Auftrag wurde erfolgreich beendet : ",
+    "JOB_REGISTERED": "Auftrag wurde registriert und ist in Bearbeitung",
+    "NO_RESULT": "Kein Resultat gefunden für die eingegebenen Parameter",
+    "NO_RESULT_TITLE": "Kein Resultat",
+    "NO_SERVER_RESPONSE": "Der Server antwortet nicht."
+  },
+
+	"UPLOAD": {
+		"ADD_FILES": "DICOM- Dateien oder Ordner hinzufügen",
+    "DROP_HERE": "Dateien hierhin ziehen",
+		"SELECT_FILE": "Wählen Sie eine Datei aus:",
+    "SELECT_FOLDER": "Wählen Sie einen Ordner aus:"
+	}
+}

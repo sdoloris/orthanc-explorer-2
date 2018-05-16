@@ -1,0 +1,60 @@
+<div *ngIf="permissions.hasWritePermission()==true" class="container-fluid">
+  <form class="form-horizontal">
+  <div class="form-group">
+    <label for="modality" class="col-sm-1 control-label">{{'QUERY.REMOTE_MODALITY' | translate}}</label>
+    <div class="col-sm-11">
+      <select id="modality" class="form-control" name="modalities" [(ngModel)]="selectedModality">
+        <option *ngFor="let modality of modalities" [ngValue]="modality" >{{modality}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="patientName" class="col-sm-1 control-label">{{'QUERY.PATIENT_NAME' | translate}}</label>
+    <div class="col-sm-11"><input id="patientName" type="text" class="form-control" [(ngModel)]="patientName" name="patientName"/></div>
+  </div>
+
+  <div class="form-group">
+    <label for="patientBirthDate" class="col-sm-1 control-label">{{'QUERY.PATIENT_BIRTHDATE' | translate}}</label>
+    <div class="col-sm-11"><input id="patientBirthDate" class="form-control" [(ngModel)]="patientBirthDate" name="patientBirthDate"/></div>
+  </div>
+
+  <div class="form-group">
+    <label for="patientID" class="col-sm-1 control-label">{{'QUERY.PATIENT_ID' | translate}}</label>
+    <div class="col-sm-11"> <input id="patientID" class="form-control" [(ngModel)]="patientID" name="patientID"/> </div>
+  </div>
+
+  <div class="form-group">
+    <label for="patientSex" class="col-sm-1 control-label">{{'QUERY.PATIENT_GENDER' | translate}}</label>
+    <div class="col-sm-11"><input id="patientSex" class="form-control" [(ngModel)]="patientSex" name="patientSex"/></div>
+  </div>
+
+  <div class="form-group">
+    <label for="studyDescription" class="col-sm-1 control-label">{{'QUERY.STUDY_DESCRIPTION' | translate}}</label>
+    <div class="col-sm-11"><input id="studyDescription" class="form-control" [(ngModel)]="studyDescription" name="studyDescription"/></div>
+  </div>
+
+  <div class="form-group">
+    <label for="studyDate" class="col-sm-1 control-label">{{'QUERY.STUDY_DATE' | translate}}</label>
+    <div class="col-sm-11"><input id="studyDate" class="form-control" [(ngModel)]="studyDate" name="studyDate"/></div>
+  </div>
+
+    <div class="form-group">
+    <label class="col-sm-1 control-label" for="studyModalities">{{'QUERY.MODALITIES' | translate}}</label>
+    <div class="col-sm-11">
+    <label name="studyModalities" *ngFor="let modality of studyModalities; let i = index" class="checkbox-inline"><input (change)="checkModality(i)" type="checkbox" name="studyModalities">{{modality}} </label><br>
+    </div>
+    </div>
+
+    <div class="form-group">
+	<div class="col-sm-offset-1 col-sm-11">
+    	<button type="submit" class="btn btn-primary" (click)="ok()">{{'QUERY.QUERY' | translate}}</button>
+  	</div>
+  </div>
+
+  </form>
+  </div>
+
+
+
+

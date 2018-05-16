@@ -1,0 +1,21 @@
+<div *ngIf="permissions.hasWritePermission()==true">
+<div class="container-fluid">
+<h3>
+  {{'RETRIEVE.NB_STUDIES' | translate}} {{nbResults}}
+</h3>
+
+<div>
+  <ul class="list-group">
+    <a class="list-group-item list-group-item-action" *ngFor="let answer of answers; let i = index" [ngClass]="{'active': this.checkedAnswers[i]}" (click)="checkAnswer(i)">
+      <span class="badge" *ngIf="answer != undefined">{{i}}</span>
+      <span *ngIf="answer != undefined"><strong>{{answer.PatientName}}</strong><br>
+        <span>{{'RETRIEVE.STUDY_DESCRIPTION' | translate}}{{answer.StudyDescription}}</span><br>
+        <button class="btn btn-default" (click)="retrieve(i)">{{'RETRIEVE.RETRIEVE' | translate}}</button>
+      </span>
+    </a>
+  </ul>
+  <button class="btn btn-default" (click)="retrieveSelected()">{{'RETRIEVE.RETRIEVE_SELECTED' | translate}} ({{this.numberSelected}})</button>
+  <button class="btn btn-default" (click)="retrieveAll()">{{'RETRIEVE.RETRIEVE_ALL' | translate}}</button>
+</div>
+</div>
+</div>

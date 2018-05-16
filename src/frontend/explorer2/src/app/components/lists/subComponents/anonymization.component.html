@@ -1,0 +1,16 @@
+<div *ngIf="permissions.hasWritePermission()==true">
+<div (click)="anonymizeBox()"><div *ngIf="showAnonymizeBox == false">{{'LIST.ANONYMIZATION' | translate}}</div></div>
+<div *ngIf="showAnonymizeBox == true">
+  <div class="input-group">
+  <input type="text" class="form-control" [(ngModel)]="anonymizedName" placeholder="Anonymized name"/>
+  </div>
+  <div class="btn-group btn-group-justified" role="group">
+    <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default" (click)="anonymize()"> Ok </button>
+    </div>
+    <div class="btn-group btn-group-justified" role="group">
+    <button type="button" class="btn btn-default" (click)="showAnonymizeBox=false">Cancel</button>
+    </div>
+  </div>
+</div>
+</div>
